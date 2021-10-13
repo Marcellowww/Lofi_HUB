@@ -25,6 +25,7 @@ function onYouTubeIframeAPIReady() {
             'autoplay': 1,
             'controls': 0,
             'loop': 1,
+            'origin': 'https://marcellowww.github.io/Lofi_HUB/'
         },
         events: {
             'onReady': onPlayerReady,
@@ -104,3 +105,5 @@ document.addEventListener('keydown', (event) => {
     }
 
 })
+
+
