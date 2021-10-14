@@ -18,7 +18,7 @@
     />
   </head>
   <body>
-    <div class="corpo" style="display: block;">
+    <div class="corpo" id='body' style="display: block;">
       <header class="header">
         <div class="container-header">
           <nav class="header-nav">
@@ -29,15 +29,15 @@
       <main class="principal">
         <div class="container-grid">
           <ul class="grid">
-            <li class="grid-itens" id="lofi1"  onclick="loadVideo(id1)">
+            <li class="grid-itens" id="lofi1"  onclick="loadVideo(element1)">
              <img
                 src="img/lofi1.gif"
                 alt="Gif ilustrativo"
                 class="grid-itens-img"
               />
-              <h5 class="grid-itens-tittle">lofi hip hop radio - beats to relax/study to</h5>
+              <h5 class="grid-itens-tittle">lofi hip hop radio - beats... </h5>
             </li>
-            <li class="grid-itens" id="lofi2" onclick="loadVideo(id2)">
+            <li class="grid-itens" id="lofi2" onclick="loadVideo(element2)">
               <img
                 src="img/lofi2.gif"
                 alt="Gif ilustrativo"
@@ -45,7 +45,7 @@
               />
               <h5 class="grid-itens-tittle">Rain Sounds Piano Music 24/7 • Beautiful Relaxing Music, Sleep Music, Stress Relief</h5>
             </li>
-            <li class="grid-itens" id="lofi3" onclick="loadVideo(id3)">
+            <li class="grid-itens" id="lofi3" onclick="loadVideo(element3)">
               <img
                 src="img/lofi3.gif"
                 alt="Gif ilustrativo"
@@ -53,7 +53,7 @@
               />
               <h5 class="grid-itens-tittle">Coffee shop radio // 24/7 lofi hip-hop beats</h5>
             </li>
-            <li class="grid-itens" id="lofi4" onclick="loadVideo(id4)">
+            <li class="grid-itens" id="lofi4" onclick="loadVideo(element4)">
               <img
                 src="img/lofi4.gif"
                 alt="Gif ilustrativo"
@@ -61,7 +61,7 @@
               />
               <h5 class="grid-itens-tittle">24/7 lofi hip hop radio - beats to study/chill/relax</h5>
             </li>
-            <li class="grid-itens" id="lofi5" onclick="loadVideo(id5)">
+            <li class="grid-itens" id="lofi5" onclick="loadVideo(element5)">
               <img
                 src="img/lofi5.gif"
                 alt="Gif ilustrativo"
@@ -69,7 +69,7 @@
               />
               <h5 class="grid-itens-tittle">lofi hip hop radio - beats to sleep/chill to</h5>
             </li>
-            <li class="grid-itens" id="lofi6" onclick="loadVideo(id6)">
+            <li class="grid-itens" id="lofi6" onclick="loadVideo(element6)">
               <img
                 src="img/lofi6.gif"
                 alt="Gif ilustrativo"
@@ -77,7 +77,7 @@
               />
               <h5 class="grid-itens-tittle">Lofi Space Station...</h5>
             </li>
-            <li class="grid-itens" id="lofi7" onclick="loadVideo(id7)">
+            <li class="grid-itens" id="lofi7" onclick="loadVideo(element7)">
               <img
                 src="img/lofi7.gif"
                 alt="Gif ilustrativo"
@@ -85,7 +85,7 @@
               />
               <h5 class="grid-itens-tittle">anime lofi hip hop radio...</h5>
             </li>
-            <li class="grid-itens" id="lofi8" onclick="loadVideo(id8)">
+            <li class="grid-itens" id="lofi8" onclick="loadVideo(element8)">
               <img
                 src="img/lofi8.gif"
                 alt="Gif ilustrativo"
@@ -93,7 +93,7 @@
               />
               <h5 class="grid-itens-tittle">ＣＨＩＬＬ　ＲＡＤＩＯ ２４／７</h5>
             </li>
-            <li class="grid-itens" id="lofi9" onclick="loadVideo(id9)">
+            <li class="grid-itens" id="lofi9" onclick="loadVideo(element9)">
               <img
                 src="img/lofi9.gif"
                 alt="Gif ilustrativo"
@@ -106,10 +106,14 @@
       </main>
     </div>
 
-    <section class="container-section" style="display: none;">
-      <img src="img\lofi1.gif" alt="gif-ilustrativo" class="background-gif" />
-      <div id="player" style="display: none;"></div>
+    <section class="container-section" style="display: none;" id='background-section'>
+      <img src="img\lofi1.gif" alt="gif-ilustrativo" class="background-gif" id="background-image" />
+      <div class='infos'>
+        <h1 class="info-title">title</h1>
+        <h3 class="info-author">author</h3>
+      </div>
     </section>
+    <div id="player" style="display: none;"></div>
 
     <script type="text/javascript" src="js/index.js"></script>
   </body>

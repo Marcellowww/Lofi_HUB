@@ -81,3 +81,22 @@ body {
     object-fit: cover;
     z-index: 0;
 }
+
+.infos {
+  position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.info-title{
+  font-size: 20px;
+  font-family: "Source Code Pro", monospace;
+}
+
+.info-author{
+  font-family: "Source Code Pro", monospace;
+}
