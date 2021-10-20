@@ -1,12 +1,12 @@
-const element1 = { id: '5qap5aO4i9A', img: '../img/lofi1.gif' }
-const element2 = { id: 'Yx1wtgBi7w0', img: '../img/lofi2.gif' }
-const element3 = { id: '-5KAN9_CzSA', img: '../img/lofi3.gif' }
-const element4 = { id: 'MCkTebktHVc', img: '../img/lofi4.gif' }
-const element5 = { id: 'DWcJFNfaw9c', img: '../img/lofi5.gif' }
-const element6 = { id: 'bM0Iw7PPoU4', img: '../img/lofi6.gif' }
-const element7 = { id: 'lcYJhHqotIQ', img: '../img/lofi7.gif' }
-const element8 = { id: '21qNxnCS8WU', img: '../img/lofi8.gif' }
-const element9 = { id: '3H6_bcfts8g', img: '../img/lofi9.gif' }
+const element1 = { id: '5qap5aO4i9A', img: './img/lofi1.gif' }
+const element2 = { id: 'Yx1wtgBi7w0', img: './img/lofi2.gif' }
+const element3 = { id: '-5KAN9_CzSA', img: './img/lofi3.gif' }
+const element4 = { id: 'MCkTebktHVc', img: './img/lofi4.gif' }
+const element5 = { id: 'DWcJFNfaw9c', img: './img/lofi5.gif' }
+const element6 = { id: 'bM0Iw7PPoU4', img: './img/lofi6.gif' }
+const element7 = { id: 'lcYJhHqotIQ', img: './img/lofi7.gif' }
+const element8 = { id: '21qNxnCS8WU', img: './img/lofi8.gif' }
+const element9 = { id: '3H6_bcfts8g', img: './img/lofi9.gif' }
 
 
 var tag = document.createElement('script');
