@@ -39,22 +39,35 @@ function onYouTubeIframeAPIReady() {
 
 const bgSection = document.getElementById('background-section');
 const body = document.getElementById('body');
-
-
 function loadVideo(element) {
-   console.log(element);
+   //console.log(element);
    player.loadVideoById(element.id);
 
    setTimeout(() => {
       const videoData = player.getVideoData()
-      console.log(videoData)
+      //console.log(videoData)
+
       body.style.display = 'none'
       bgSection.style.display = 'block'
-      bgSection.innerHTML = `<img src=${element.img} alt="gif-ilustrativo" class="background-gif" id="background-image"/>
+      bgSection.innerHTML = `
+      <img src=${element.img} alt="gif-ilustrativo" class="background-gif" id="background-image"/>
       <div class='infos'>
-      <h1 class="info-title">${videoData.title}</h1>
-      <h3 class="info-author">${videoData.author}</h3>
-      </div>`
+         <div class="infos-container">
+         <a href=${player.getVideoUrl()} target='_blank'><h1 class="info-title">${videoData.title}</h1></a>
+            <h3 class="info-author">${videoData.author}</h3>
+         </div>
+      </div>
+      <div class="controls">
+         <div class='pause-play'>
+            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="#ffffff" id='pause' onclick='onPausePlay()'><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+       
+            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="#ffffff" style="position: absolute;" onclick='onPausePlay()'><path d="M0 0h24v24H0V0z" fill="none" style="position: absolute;"></path><path d="M10 16.5l6-4.5-6-4.5zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" style="display:none" id="play"></path></svg>
+         </div>
+         <div class='back-arrow'>
+            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="#FFFFFF" onclick='back()'><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+         </div>
+      </div>
+      `
    }, 1000)
 
 }
@@ -74,15 +87,36 @@ function onPlayerStateChange(event) {
 }
 
 
+function onPausePlay(){
+   const pause = document.getElementById('pause')
+   const play = document.getElementById('play')
+   if (player.getPlayerState() == 1) {
+      player.pauseVideo();
+      pause.style.display = 'none'
+      play.style.display = 'block'
+   }
+   if(player.getPlayerState() == 2) {
+      player.playVideo();
+      play.style.display = 'none'
+      pause.style.display = 'block'
+
+   }
+   
+}
+
+function back(){
+      bgSection.style.display = 'none'
+      body.style.display = 'block'
+      player.stopVideo()
+}
+
+
 document.addEventListener('keyup', (event) => {
    const keyCode = event.code;
    //console.log(keyCode);
 
    if (keyCode == 'Space') {
-      if (player.getPlayerState() == 1) {
-         player.pauseVideo();
-      } else (player.getPlayerState() == 2), player.playVideo();
-
+      onPausePlay()
    }
 
    if (keyCode == 'KeyM') {
@@ -96,10 +130,7 @@ document.addEventListener('keyup', (event) => {
    }
 
    if (keyCode == 'Escape') {
-      bgSection.style.display = 'none'
-      body.style.display = 'block'
-      player.stopVideo()
-      player.clearVideo()
+      back()
    }
 
 

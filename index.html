@@ -107,11 +107,18 @@
     </div>
 
     <section class="container-section" style="display: none;" id='background-section'>
-      <img src="img\lofi1.gif" alt="gif-ilustrativo" class="background-gif" id="background-image" />
-      <div class='infos'>
-        <h1 class="info-title">title</h1>
-        <h3 class="info-author">author</h3>
+      <img src=${element.img} alt="gif-ilustrativo" class="background-gif" id="background-image"/>
+      
+      <div class="controls">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" class="svg-pause" onclick=""/></svg>
       </div>
+
+      <div class='infos'>
+         <div class="infos-container">
+         <a href=${player.getVideoUrl()} target='_blank'><h1 class="info-title">${videoData.title}</h1></a>
+            <h3 class="info-author">${videoData.author}</h3>
+         </div>
+      </div>`
     </section>
     <div id="player" style="display: none;"></div>
 

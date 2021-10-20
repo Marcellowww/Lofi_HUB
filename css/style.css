@@ -72,6 +72,8 @@ body {
     z-index: 1;
 }
 
+
+
 .background-gif {
     position: absolute;
     width: 100vw;
@@ -82,7 +84,7 @@ body {
     z-index: 0;
 }
 
-.infos {
+.controls{
   position: absolute;
     width: 100vw;
     height: 100vh;
@@ -92,11 +94,55 @@ body {
     z-index: 0;
 }
 
+.pause-play{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.back-arrow{
+  margin-left: 10px;
+  margin-top: 10px;
+  position: absolute;
+  top: 0px;
+ 
+}
+
+
+
+.infos {
+  position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    object-fit: cover;
+    z-index: 0;
+    
+}
+
+.infos-container{
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
 .info-title{
-  font-size: 20px;
+  font-size: 30px;
   font-family: "Source Code Pro", monospace;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .info-author{
+  font-size: 20px;
+  font-weight: bold;
   font-family: "Source Code Pro", monospace;
+  color: white;
 }
+
